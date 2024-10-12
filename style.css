@@ -21,7 +21,11 @@
   --highlight-color: rgba(255, 255, 255, 0.1);
   --switch-bg-url: url(./assets/Sun.svg);
 }
-body {
+body{
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
+}
+body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
   /*
@@ -30,8 +34,7 @@ body {
   background-position: top center;
   background-size: cover;
   */
-  background: var(--bg-url) no-repeat top center/cover;
-}
+  }
 #container {
   width: 100%;
   max-width: 600px;
@@ -143,4 +146,14 @@ footer {
   font-size: 14px;
   padding: 24px 0;
   text-align: center;
+}
+
+/*media queries */
+@media (min-width: 700px){
+  :root {
+    --bg-url:url(./assets/bg-desktop.jpg);
+  }
+  .light{
+    --bg-url:url(./assets/bg-desktop-light.jpg);
+  }
 }
